@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baca Buku Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #005691;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #003a61;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .class-section {
+            margin: 30px 0;
+        }
+        
+        .class-title {
+            font-size: 24px;
+            color: #003a61;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #003a61;
+        }
+        
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .subject-card {
+            position: relative;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .subject-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .subject-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(2px);
+            border-radius: 0 0 5px 5px;
+            overflow: hidden;  
+            color: white;
+            padding: 15px;
+        }
+        
+        .subject-info h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        
+        .subject-info p {
+            color: #f5f5f5;
+            font-size: 14px;
+        }
+        
+        .view-btn {
+            display: inline-block;
+            background-color: #005691;
+            color: white;
+            padding: 8px 15px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        footer {
+            background-color: #003a61;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        /* PDF Viewer Styles */
+        .pdf-container {
+            margin: 20px auto;
+            max-width: 1000px;
+            height: 800px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+        
+        .book-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn {
+            background-color: #005691;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Baca Buku Online</h1>
+        <p>Akses Semua Buku Pelajaran SMA Kelas 10, 11, dan 12</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kelas10.html">Kelas 10</a></li>
+            <li><a href="kelas11.html">Kelas 11</a></li>
+            <li><a href="kelas12.html">Kelas 12</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="class-section">
+            <h2 class="class-title">Kelas 10</h2>
+            <div class="subjects">
+                <div class="subject-card">
+                    <img src="https://a.cdn-myedisi.com/book/cover/bse-a_66a1f8558bce7693881810.jpg" alt="Matematika">
+                    <div class="subject-info">
+                        <h3>Matematika</h3>
+                        <p>Buku Matematika untuk SMA Kelas 10</p>
+                        <a href="viewer.html?book=matematika10.pdf" class="view-btn">Baca Buku</a>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <img src="/api/placeholder/200/120" alt="Fisika">
+                    <div class="subject-info">
+                        <h3>Fisika</h3>
+                        <p>Buku Fisika untuk SMA Kelas 10</p>
+                        <a href="viewer.html?book=fisika10.pdf" class="view-btn">Baca Buku</a>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <img src="/api/placeholder/200/120" alt="Kimia">
+                    <div class="subject-info">
+                        <h3>Kimia</h3>
+                        <p>Buku Kimia untuk SMA Kelas 10</p>
+                        <a href="viewer.html?book=kimia10.pdf" class="view-btn">Baca Buku</a>
+                    </div>
+                </div>
+                
+                <!-- Tambahkan subject card lainnya untuk mata pelajaran kelas 10 -->
+            </div>
+        </div>
+        
+        <!-- Bagian untuk kelas 11 dan 12 - struktur serupa -->
+        <div class="class-section">
+            <h2 class="class-title">Kelas 11</h2>
+            <div class="subjects">
+                <!-- Subject cards untuk kelas 11 -->
+            </div>
+        </div>
+        
+        <div class="class-section">
+            <h2 class="class-title">Kelas 12</h2>
+            <div class="subjects">
+                <!-- Subject cards untuk kelas 12 -->
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Portal Buku BSE SMA. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
